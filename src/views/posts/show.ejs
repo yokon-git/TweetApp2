@@ -28,7 +28,7 @@
       <% if(user.equal(currentUser)) { %>
         <div class="post-menus">
           <a href="/edit_post/<%= post.id %>" data-test="post-link-edit">Edit</a>
-          <form action="/delete_post/<%= post.id %>" method="POST" data-test="form-like-delete">
+          <form action="/delete_post/<%= post.id %>?_method=DELETE" method="POST" data-test="form-like-delete">
             <input type="submit" value="Delete" data-test="submit-post-delete">
           </form>
         </div>

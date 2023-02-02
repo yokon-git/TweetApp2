@@ -95,7 +95,7 @@ postRouter.get(
   }
 );
 
-postRouter.post(
+postRouter.patch(/** ----> postからpatchへ変更 */
   "/update_post/:postId",
   ensureAuthUser,
   ensureOwnerOfPost,
@@ -119,7 +119,7 @@ postRouter.post(
   }
 );
 
-postRouter.post(
+postRouter.delete(/** ----> postからdeleteへ変更 */
   "/delete_post/:postId",
   ensureAuthUser,
   ensureOwnerOfPost,
