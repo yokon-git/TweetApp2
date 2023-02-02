@@ -84,7 +84,7 @@ postRouter.post(
     const post = new Post(content, currentUserId);
     await post.save();
     req.dialogMessage?.setMessage("Post successfully created");
-    res.redirect("/posts");/** get_部分を削除 */
+    res.redirect("/posts"); /** get_部分を削除 */
   }
 );
 
@@ -122,7 +122,7 @@ postRouter.patch(
     post.content = content;
     await post.update();
     req.dialogMessage?.setMessage("Post successfully edited");
-    res.redirect("/posts");/** get_部分を削除 */
+    res.redirect("/posts"); /** get_部分を削除 */
   }
 );
 
@@ -136,6 +136,6 @@ postRouter.delete(
     const post = res.locals.post;
     await post.delete();
     req.dialogMessage?.setMessage("Post successfully deleted");
-    res.redirect("/posts");/** get_部分を削除 */
+    res.redirect("/posts"); /** get_部分を削除 */
   }
 );
